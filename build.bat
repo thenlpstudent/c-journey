@@ -1,5 +1,5 @@
 echo Compiling Source Files... 
-
+mkdir builds 
 echo Compiling Chapter 1 source files...
 clang chap1/bank.c -o builds/chap1_bank.exe
 clang chap1/circle.c -o builds/chap1_circle.exe
