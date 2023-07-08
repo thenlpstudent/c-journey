@@ -26,10 +26,10 @@ void print_col_sums(int *grid)
         int colum_sums[] = {0, 0, 0, 0};
         for (int i = 0; i <= 12; i += 4)
         {
-                colum_sums[0] += grid[i];
-                colum_sums[1] += grid[i + 1];
-                colum_sums[2] += grid[i + 2];
-                colum_sums[3] += grid[i + 3];
+                for (int j = 0; j < 4; j++)
+                        {
+                             colum_sums[j] += grid[i+j];   
+                        }
         }
         printf("Column sums: %2d %2d %2d %2d\n",
                colum_sums[0], colum_sums[1], colum_sums[2], colum_sums[3]);
