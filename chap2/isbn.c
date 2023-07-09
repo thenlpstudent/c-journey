@@ -13,7 +13,7 @@ int main(void)
         group_names[2] = "Publisher code";
         group_names[3] = "Item number";
         group_names[4] = "Check digit";
-
+	
         for (int i = 0; i < 5; i++)
         {
                 printf("%s :%d\n", group_names[i], isbn[i]);
