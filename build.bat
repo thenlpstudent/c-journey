@@ -19,4 +19,12 @@ clang chap2/isbn.c -o builds/chap2_isbn.exe
 clang chap2/telephone.c -o builds/chap2_telephone.exe
 echo Done compiling Chapter 2 source files
 
+echo Compiling Chapter 3 source files 
+clang chap3/ean.c -o builds/chap3_ean.exe
+clang chap3/octal.c -o builds/chap3_octal.exe
+clang chap3/reverse.c -o builds/chap3_reverse.exe
+clang chap3/reverse2.c -o builds/chap3_reverse2.exe
+clang chap3/upc.c -o builds/chap3_upc.exe
+echo Done compiling Chapter 3 source files
+
 pause 
