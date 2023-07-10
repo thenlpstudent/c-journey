@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-float calc_tax(float income, int * conditions, float * fixed_tax,int * taxable_amounts, int * precentages, int size)
+float calc_tax(float income, int * conditions, float * fixed_tax, int * taxable_amounts, int * precentages, int size)
 {
   int ind = 0; 
   for (int i = 0; i < size; i++)
