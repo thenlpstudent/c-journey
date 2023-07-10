@@ -56,8 +56,6 @@ int main(void)
      5250,
      7000
     };
-  float tax = calc_tax(income, conditions, fixed_tax, taxable_amounts, precentages, 6); 
-  printf("Your tax is : %f\n", tax);
- 
+  printf("Your tax is : %f\n",  calc_tax(income, conditions, fixed_tax, taxable_amounts, precentages, 6));
   return 0; 
 }
