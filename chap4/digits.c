@@ -29,6 +29,7 @@ int main(void)
       if (number >= lowerbound && number <= upperbound)
 	{
 	  printf("The number has %d digits", i+1); 
+	  break;
 	}
     }
   
