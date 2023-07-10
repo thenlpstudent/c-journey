@@ -27,7 +27,7 @@ int main(void)
     {
       int lowerbound = pw(i);
       upperbound += 9 * lowerbound;
-      out += (i+1)*(number >= lowerbound && number <= upperbound);
+      out += (i+1)*(number >= lowerbound && number <= upperbound); 
     }
   printf("Digits are %d\n", out);
 }
