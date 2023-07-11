@@ -20,16 +20,17 @@ char * get_digits(int d)
 
 void number_as_text(int t, int d)
 {
-  if (t == 1)
-    {
-      printf("Number to text: %s\n", get_10_str(d)); 
-    }else
-    {
-      if (d != 0)
-	printf("Number to text: %s-%s\n", get_tenths_str(t), get_digits(d));
-      else
-	printf("Number to text: %s\n", get_tenths_str(t));  
-    }
+	//10-19
+	if (t == 1)
+		printf("Number to text: %s\n", get_10_str(d));
+
+	//21-99
+	if (t != 1 && d != 0)
+		printf("Number to text: %s-%s\n", get_tenths_str(t), get_digits(d));
+
+	//20-30-40...-90
+	if (t != 1 && d == 0)
+		printf("Number to text: %s\n", get_tenths_str(t)); 
 }
 
 int main(void)
