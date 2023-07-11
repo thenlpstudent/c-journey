@@ -18,7 +18,7 @@ char * get_digits(int d)
   return strs_digits[(d - 1)]; 
 }
 
-void number_as_text(int t, int d)
+void print_number_as_text(int t, int d)
 {
 	//10-19
 	if (t == 1)
@@ -40,5 +40,5 @@ int main(void)
   printf("Enter a two-digit number: ");
   scanf_s("%1d%1d", &t, &d);
 
-  number_as_text(t,d);  
+  print_number_as_text(t,d);  
 }
