@@ -1,13 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
+#define NUM(a) (sizeof(a) / sizeof(*a))
 
-void filter(int * arr,int size, int (*p)(int a))
+int * filter(int * arr,int size, int (*p)(int a))
 {
+  int ind = 0; 
+  int * result = (int*)malloc(size*sizeof(int));   
   for (int i = 0; i < size; i++)
     {
       if (p(arr[i]))
-	printf("%d ", arr[i]);
+	{
+	  printf("yo -> %d\n", arr[i]);
+	  result[ind] = arr[i];
+	  ind += 1; 
+	}
     }
-  printf("\n");
+
+  if (ind != size)
+    {
+      printf("ind is %d\n", ind);
+      realloc(result, ind * sizeof(int)); 
+    }
+  return result;
 }
 
 int f(int a)
@@ -46,11 +60,11 @@ int m(int a)
 
 int main(void)
 {
-  int arr[] = {5,4,6,7};
-  filter(arr, 4, &f);
-
-  printf("reduced: %d\n", reduce(arr, 4, &r));
-
-  map(arr, 4, &m);
-  return 0; 
+  int arr [] = {1,2,3,4,5,6,7,8,9,10};
+  int * fs = filter(arr, 10, f);
+  int s = NUM(fs);
+ 
+  for (int i = 0; i < s; i++)
+    printf("%d\n", fs[i]); 
+  
 }
